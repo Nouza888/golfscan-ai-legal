@@ -2,155 +2,238 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="robots" content="noindex,nofollow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Privacy Policy | GolfScan AI</title>
+  <meta name="description" content="Privacy Policy for GolfScan AI" />
+
   <style>
     :root{
-      --bg:#0b0f19;
-      --card:#111827;
-      --text:#e5e7eb;
-      --muted:#9ca3af;
-      --line:rgba(255,255,255,.12);
-      --accent:#22c55e;
-      --accent2:#60a5fa;
-      --shadow:0 10px 30px rgba(0,0,0,.35);
+      --bg: #ffffff;
+      --surface: #ffffff;
+      --text: #111827;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+      --brand: #16a34a; /* ほんのり“GolfScanっぽい”アクセント */
+      --brand-soft: #ecfdf5;
+      --shadow: 0 10px 25px rgba(0,0,0,.06);
     }
-    html,body{height:100%;}
+
+    html, body { height: 100%; }
     body{
-      margin:0;
-      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji";
-      background: radial-gradient(1200px 700px at 20% 0%, rgba(96,165,250,.18), transparent 60%),
-                  radial-gradient(1000px 600px at 80% 10%, rgba(34,197,94,.14), transparent 55%),
-                  var(--bg);
-      color:var(--text);
-      line-height:1.65;
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                   "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji",
+                   "Segoe UI Emoji";
+      line-height: 1.7;
     }
-    a{color:var(--accent2); text-decoration:none;}
-    a:hover{text-decoration:underline;}
-    .wrap{max-width:980px; margin:0 auto; padding:28px 18px 60px;}
+
+    a{ color: var(--brand); text-decoration: none; }
+    a:hover{ text-decoration: underline; }
+
+    .topbar{
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(255,255,255,.88);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .topbar-inner{
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .brand{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
+    }
+    .logo{
+      width: 34px; height: 34px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, var(--brand), #22c55e);
+      box-shadow: 0 8px 18px rgba(22,163,74,.22);
+      flex: 0 0 auto;
+    }
+    .brand-title{
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+    }
+    .brand-title strong{
+      font-size: 14px;
+      letter-spacing: .2px;
+    }
+    .brand-title span{
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .lang{
+      display: inline-flex;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      overflow: hidden;
+      background: #fff;
+      flex: 0 0 auto;
+    }
+    .lang a{
+      padding: 8px 12px;
+      font-size: 13px;
+      color: var(--text);
+    }
+    .lang a:hover{
+      background: #f9fafb;
+      text-decoration: none;
+    }
+
+    .wrap{
+      max-width: 920px;
+      margin: 24px auto 56px;
+      padding: 0 16px;
+    }
+
     .hero{
-      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
-      border:1px solid var(--line);
-      border-radius:18px;
-      box-shadow:var(--shadow);
-      padding:22px 18px;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 18px 18px 16px;
+      background: linear-gradient(180deg, var(--brand-soft), #fff 70%);
+      box-shadow: var(--shadow);
     }
-    .title{
-      display:flex; flex-wrap:wrap; gap:10px 14px; align-items:baseline; justify-content:space-between;
-      margin-bottom:10px;
+    .hero h1{
+      margin: 0 0 6px;
+      font-size: 22px;
+      line-height: 1.3;
     }
-    .title h1{font-size:22px; margin:0;}
-    .meta{color:var(--muted); font-size:13px;}
-    .pills{display:flex; gap:10px; flex-wrap:wrap; margin-top:12px;}
+    .hero .meta{
+      color: var(--muted);
+      font-size: 13px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 14px;
+      margin-top: 6px;
+    }
     .pill{
-      display:inline-flex; align-items:center; gap:8px;
-      border:1px solid var(--line);
-      background:rgba(0,0,0,.25);
-      padding:8px 10px; border-radius:999px;
-      font-size:13px; color:var(--text);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: #fff;
     }
-    .dot{width:8px; height:8px; border-radius:99px; background:var(--accent);}
-    .dot.blue{background:var(--accent2);}
-    .toc{
-      margin-top:16px;
-      border-top:1px solid var(--line);
-      padding-top:14px;
-      display:flex; gap:10px; flex-wrap:wrap;
-      color:var(--muted);
-      font-size:13px;
+    .dot{
+      width: 8px; height: 8px;
+      border-radius: 999px;
+      background: var(--brand);
     }
-    .toc a{border:1px solid var(--line); padding:7px 10px; border-radius:10px; background:rgba(0,0,0,.18);}
-    .card{
-      margin-top:18px;
-      background:rgba(17,24,39,.72);
-      border:1px solid var(--line);
-      border-radius:18px;
-      box-shadow:var(--shadow);
-      overflow:hidden;
+
+    main{
+      margin-top: 18px;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: var(--surface);
+      box-shadow: var(--shadow);
+      overflow: hidden;
     }
-    .cardHeader{
-      padding:14px 18px;
-      border-bottom:1px solid var(--line);
-      display:flex; align-items:center; justify-content:space-between; gap:10px; flex-wrap:wrap;
+
+    .section{
+      padding: 18px 18px;
+      border-top: 1px solid var(--border);
     }
-    .cardHeader h2{margin:0; font-size:18px;}
-    .langLinks{font-size:13px; color:var(--muted);}
-    .cardBody{padding:18px;}
-    h3{margin:18px 0 8px; font-size:16px;}
-    h4{margin:14px 0 6px; font-size:14px; color:var(--text);}
-    p{margin:10px 0;}
-    ul{margin:8px 0 12px 20px;}
-    li{margin:6px 0;}
-    .hr{height:1px; background:var(--line); margin:18px 0;}
-    .note{
-      border-left:3px solid var(--accent2);
-      background:rgba(96,165,250,.08);
-      padding:10px 12px;
-      border-radius:12px;
-      color:var(--text);
-      margin:12px 0;
+    .section:first-child{ border-top: none; }
+
+    h2{
+      margin: 0 0 10px;
+      font-size: 16px;
     }
-    .muted{color:var(--muted);}
+    h3{
+      margin: 14px 0 6px;
+      font-size: 14px;
+    }
+    p{ margin: 8px 0; }
+    ul{ margin: 8px 0 8px 20px; }
+    li{ margin: 6px 0; }
+
+    .muted{ color: var(--muted); }
+    .divider{
+      height: 1px;
+      background: var(--border);
+      margin: 14px 0;
+    }
+
     .footer{
-      margin-top:18px;
-      color:var(--muted);
-      font-size:12px;
-      text-align:center;
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: 12px;
+      text-align: center;
     }
-    code{background:rgba(0,0,0,.28); padding:2px 6px; border-radius:8px; border:1px solid var(--line);}
+
+    /* 小さめ画面での詰まり防止 */
+    @media (max-width: 520px){
+      .hero h1{ font-size: 20px; }
+      .lang a{ padding: 8px 10px; }
+      .section{ padding: 16px; }
+    }
   </style>
 </head>
 
 <body>
-  <div class="wrap">
-    <div class="hero">
-      <div class="title">
-        <h1>GolfScan AI — Privacy Policy</h1>
-        <div class="meta">Effective date: <strong>2025-12-15</strong></div>
-      </div>
-
-      <div class="meta">
-        Contact: <a href="mailto:golfscan.ai.support@gmail.com">golfscan.ai.support@gmail.com</a>
-      </div>
-
-      <div class="pills" aria-label="Key points">
-        <span class="pill"><span class="dot"></span> We do not upload swing videos</span>
-        <span class="pill"><span class="dot blue"></span> We may send numerical swing data for report generation</span>
-        <span class="pill"><span class="dot"></span> Reports may be stored on-device</span>
-        <span class="pill"><span class="dot blue"></span> Firebase Analytics & Crashlytics are used</span>
-      </div>
-
-      <div class="toc" aria-label="Quick navigation">
-        <a href="#en">English</a>
-        <a href="#ja">日本語</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </div>
-
-    <!-- ENGLISH -->
-    <section id="en" class="card" aria-label="English Privacy Policy">
-      <div class="cardHeader">
-        <h2>Privacy Policy for GolfScan AI (English)</h2>
-        <div class="langLinks">
-          Jump to: <a href="#ja">日本語</a>
+  <div class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div class="brand-title">
+          <strong>GolfScan AI</strong>
+          <span>Legal / Privacy</span>
         </div>
       </div>
+      <div class="lang" aria-label="Language">
+        <a href="#en">English</a>
+        <a href="#ja">日本語</a>
+      </div>
+    </div>
+  </div>
 
-      <div class="cardBody">
+  <div class="wrap">
+    <div class="hero">
+      <h1>Privacy Policy</h1>
+      <div class="meta">
+        <span class="pill"><span class="dot"></span>Effective date: <strong>2025-12-15</strong></span>
+        <span class="pill">Contact: <a href="mailto:golfscan.ai.support@gmail.com">golfscan.ai.support@gmail.com</a></span>
+      </div>
+      <p class="muted" style="margin-top:10px;">
+        This page explains what information we collect, how we use it, and the choices you have.
+      </p>
+    </div>
+
+    <main>
+      <!-- ===================== English ===================== -->
+      <section class="section" id="en">
+        <h2>Privacy Policy for GolfScan AI</h2>
+        <p class="muted"><strong>Effective date:</strong> 2025-12-15</p>
+
         <p>
           GolfScan AI (“the App”) is provided by <strong>[Your Legal Name]</strong> (“we”, “us”, “our”).
           This Privacy Policy explains what information we collect, how we use it, and the choices you have.
         </p>
-
-        <p class="muted">
+        <p>
           If you have any questions, contact us at:
           <a href="mailto:golfscan.ai.support@gmail.com">golfscan.ai.support@gmail.com</a>
         </p>
 
-        <div class="hr"></div>
+        <div class="divider"></div>
 
-        <h3>1. Summary (Quick &amp; Honest)</h3>
+        <h2>1. Summary (Quick &amp; Honest)</h2>
         <ul>
           <li>We do not upload your swing video to our servers or to AI providers.</li>
           <li>We may send numerical analysis data (e.g., pose/skeleton coordinates and swing metrics) to an AI provider to generate your report.</li>
@@ -158,15 +241,17 @@
           <li>We use Firebase Analytics to understand app usage and Firebase Crashlytics to detect crashes and improve stability.</li>
         </ul>
 
-        <h3>2. Information We Collect</h3>
-        <h4>A) Information you provide / generated by your use</h4>
+        <div class="divider"></div>
+
+        <h2>2. Information We Collect</h2>
+        <h3>A) Information you provide / generated by your use</h3>
         <ul>
           <li><strong>Swing analysis data (numerical):</strong> pose/skeleton coordinates, angles, timing, and other computed metrics derived from your selected video.</li>
           <li><strong>Generated report content:</strong> text and/or structured report data produced for display in the App.</li>
           <li><strong>In-app settings:</strong> such as language/locale and coach persona selection.</li>
         </ul>
 
-        <h4>B) Automatically collected information (analytics &amp; crash reporting)</h4>
+        <h3>B) Automatically collected information (analytics &amp; crash reporting)</h3>
         <p>We use Firebase services that may collect:</p>
         <ul>
           <li>Device information (e.g., device model, OS version)</li>
@@ -179,7 +264,9 @@
           (e.g., by emailing support).
         </p>
 
-        <h3>3. How We Use Information</h3>
+        <div class="divider"></div>
+
+        <h2>3. How We Use Information</h2>
         <ul>
           <li>Provide swing analysis and generate coaching reports</li>
           <li>Improve report quality, app performance, and user experience</li>
@@ -187,31 +274,35 @@
           <li>Prevent abuse (e.g., enforcing usage limits)</li>
         </ul>
 
-        <h3>4. AI Processing / Data Sent to Third Parties</h3>
+        <div class="divider"></div>
+
+        <h2>4. AI Processing / Data Sent to Third Parties</h2>
         <p>
           To generate reports, the App may send numerical swing analysis data (pose/skeleton coordinates and metrics)
           and relevant settings (e.g., language/persona) to our backend service, which then calls an AI provider
           (currently Google Gemini or another provider we may adopt in the future).
         </p>
-        <div class="note">
-          <strong>Important:</strong>
-          <ul>
-            <li>We do not send your swing video file to the AI provider.</li>
-            <li>Only numerical/derived analysis data and the necessary prompt context are sent for report generation.</li>
-          </ul>
-        </div>
+        <p><strong>Important:</strong></p>
+        <ul>
+          <li>We do not send your swing video file to the AI provider.</li>
+          <li>Only numerical/derived analysis data and the necessary prompt context are sent for report generation.</li>
+        </ul>
 
-        <h3>5. Data Storage &amp; Retention</h3>
+        <div class="divider"></div>
+
+        <h2>5. Data Storage &amp; Retention</h2>
         <ul>
           <li><strong>On-device:</strong> Your generated reports and related data may be stored locally on your device.</li>
           <li><strong>Server-side:</strong> We do not store your swing video. Our backend may process numerical analysis data transiently to generate a report. Limited logs may exist for operational purposes (e.g., error logs) but we aim to minimize what is logged.</li>
           <li><strong>Analytics/Crash data:</strong> Firebase may retain analytics and crash data according to their standard retention practices.</li>
         </ul>
 
-        <h3>6. Sharing of Information</h3>
+        <div class="divider"></div>
+
+        <h2>6. Sharing of Information</h2>
         <p>We may share information with:</p>
         <ul>
-          <li><strong>Service providers</strong> we use to operate the App:
+          <li><strong>Service providers we use to operate the App:</strong>
             <ul>
               <li>Google Firebase (Analytics, Crashlytics, and backend functions)</li>
               <li>AI model providers used for report generation (e.g., Google Gemini)</li>
@@ -221,86 +312,77 @@
         </ul>
         <p>We do not sell your personal information.</p>
 
-        <h3>7. Your Choices</h3>
+        <div class="divider"></div>
+
+        <h2>7. Your Choices</h2>
         <ul>
           <li>You can stop data collection by uninstalling the App.</li>
-          <li>
-            If you want to request deletion of data that may be associated with analytics/crash logs,
-            contact us at <a href="mailto:golfscan.ai.support@gmail.com">golfscan.ai.support@gmail.com</a>.
-            <span class="muted">(Note: analytics data may not be directly linked to you.)</span>
-          </li>
+          <li>If you want to request deletion of data that may be associated with analytics/crash logs, contact us at <a href="mailto:golfscan.ai.support@gmail.com">golfscan.ai.support@gmail.com</a>. (Note: analytics data may not be directly linked to you.)</li>
         </ul>
 
-        <h3>8. Children’s Privacy</h3>
-        <p>
-          The App is not intended for children under the age of 13 (or the minimum age required in your jurisdiction).
-          We do not knowingly collect personal information from children.
+        <div class="divider"></div>
+
+        <h2>8. Children’s Privacy</h2>
+        <p>The App is not intended for children under the age of 13 (or the minimum age required in your jurisdiction). We do not knowingly collect personal information from children.</p>
+
+        <div class="divider"></div>
+
+        <h2>9. International Users</h2>
+        <p>Your information may be processed in countries other than your own, depending on where our service providers operate (e.g., Google/Firebase infrastructure). We take reasonable steps to protect information in transit and at rest.</p>
+
+        <div class="divider"></div>
+
+        <h2>10. Security</h2>
+        <p>We use reasonable administrative, technical, and physical safeguards designed to protect information. However, no method of transmission or storage is 100% secure.</p>
+
+        <div class="divider"></div>
+
+        <h2>11. Changes to This Policy</h2>
+        <p>We may update this Privacy Policy from time to time. We will update the “Effective date” above when changes are made. Continued use of the App after changes means you accept the updated policy.</p>
+
+        <div class="divider"></div>
+
+        <h2>12. Contact</h2>
+        <p><strong>Operator:</strong> [Your Legal Name]<br/>
+           <strong>Email:</strong> <a href="mailto:golfscan.ai.support@gmail.com">golfscan.ai.support@gmail.com</a>
         </p>
+      </section>
 
-        <h3>9. International Users</h3>
-        <p>
-          Your information may be processed in countries other than your own, depending on where our service providers
-          operate (e.g., Google/Firebase infrastructure). We take reasonable steps to protect information in transit and at rest.
-        </p>
-
-        <h3>10. Security</h3>
-        <p>
-          We use reasonable administrative, technical, and physical safeguards designed to protect information.
-          However, no method of transmission or storage is 100% secure.
-        </p>
-
-        <h3>11. Changes to This Policy</h3>
-        <p>
-          We may update this Privacy Policy from time to time. We will update the “Effective date” above when changes are made.
-          Continued use of the App after changes means you accept the updated policy.
-        </p>
-
-        <h3 id="contact">12. Contact</h3>
-        <p><strong>Operator:</strong> [Your Legal Name]</p>
-        <p><strong>Email:</strong> <a href="mailto:golfscan.ai.support@gmail.com">golfscan.ai.support@gmail.com</a></p>
-      </div>
-    </section>
-
-    <!-- JAPANESE -->
-    <section id="ja" class="card" aria-label="日本語プライバシーポリシー">
-      <div class="cardHeader">
+      <!-- ===================== Japanese ===================== -->
+      <section class="section" id="ja">
         <h2>GolfScan AI プライバシーポリシー（日本語）</h2>
-        <div class="langLinks">
-          Jump to: <a href="#en">English</a>
-        </div>
-      </div>
-
-      <div class="cardBody">
-        <p class="muted">施行日：<strong>2025-12-15</strong></p>
+        <p class="muted"><strong>施行日：</strong>2025-12-15</p>
 
         <p>
           GolfScan AI（以下「本アプリ」）は <strong>[Your Legal Name]</strong>（以下「当方」）が提供します。
           本プライバシーポリシーは、当方が取得する情報、その利用目的、およびユーザーの選択肢について説明するものです。
         </p>
-
-        <p class="muted">
-          お問い合わせ：<a href="mailto:golfscan.ai.support@gmail.com">golfscan.ai.support@gmail.com</a>
+        <p>
+          お問い合わせ：
+          <a href="mailto:golfscan.ai.support@gmail.com">golfscan.ai.support@gmail.com</a>
         </p>
 
-        <div class="hr"></div>
+        <div class="divider"></div>
 
-        <h3>1. 重要ポイント（まずここだけ）</h3>
+        <h2>1. 重要ポイント（まずここだけ）</h2>
         <ul>
-          <li>当方は <strong>スイング動画ファイル</strong>をサーバーやAI提供元へ送信しません。</li>
-          <li>レポート生成のため、骨格座標やスイング指標などの<strong>数値データ</strong>をAI提供元へ送信する場合があります。</li>
-          <li>レポート等のデータは <strong>端末内</strong>に保存される場合があります。</li>
-          <li>利用状況の把握と品質改善のために <strong>Firebase Analytics</strong>、クラッシュ解析のために <strong>Firebase Crashlytics</strong> を利用します。</li>
+          <li>当方は <strong>スイング動画ファイル</strong> をサーバーやAI提供元へ送信しません。</li>
+          <li>レポート生成のため、骨格座標やスイング指標などの <strong>数値データ</strong> をAI提供元へ送信する場合があります。</li>
+          <li>レポート等のデータは <strong>端末内</strong> に保存される場合があります。</li>
+          <li>利用状況の把握と品質改善のために Firebase Analytics、クラッシュ解析のために Firebase Crashlytics を利用します。</li>
         </ul>
 
-        <h3>2. 取得する情報</h3>
-        <h4>A）ユーザーの利用により生成・提供される情報</h4>
+        <div class="divider"></div>
+
+        <h2>2. 取得する情報</h2>
+        <h3>A）ユーザーの利用により生成・提供される情報</h3>
         <ul>
-          <li><strong>スイング解析データ（数値）：</strong> 骨格（関節）座標、角度、テンポ、その他算出された指標等</li>
-          <li><strong>生成されたレポート内容：</strong> 本アプリ上で表示するテキストおよび構造化データ（JSON等）</li>
-          <li><strong>アプリ内設定：</strong> 言語、ペルソナ選択など</li>
+          <li>スイング解析データ（数値）：骨格（関節）座標、角度、テンポ、その他算出された指標等</li>
+          <li>生成されたレポート内容：本アプリ上で表示するテキストおよび構造化データ（JSON等）</li>
+          <li>アプリ内設定：言語、ペルソナ選択など</li>
         </ul>
 
-        <h4>B）自動的に取得される情報（分析・クラッシュ）</h4>
+        <h3>B）自動的に取得される情報（分析・クラッシュ）</h3>
         <p>Firebase等のサービスにより、以下が収集される場合があります：</p>
         <ul>
           <li>端末情報（機種、OSバージョン等）</li>
@@ -308,12 +390,11 @@
           <li>クラッシュログ/診断情報（クラッシュ時のスタックトレース等）</li>
           <li>IPアドレスに基づく概ねの地域情報（ネットワーク通信の一般的性質として）</li>
         </ul>
-        <p>
-          ※当方は、ユーザーが明示的に提供しない限り、氏名・電話番号・正確な位置情報などを取得しません
-          （例：サポートへのメール送信時を除く）。
-        </p>
+        <p>※当方は、ユーザーが明示的に提供しない限り、氏名・電話番号・正確な位置情報などを取得しません（例：サポートへのメール送信時を除く）。</p>
 
-        <h3>3. 利用目的</h3>
+        <div class="divider"></div>
+
+        <h2>3. 利用目的</h2>
         <ul>
           <li>スイング解析およびレポート生成の提供</li>
           <li>レポート品質、アプリ体験、性能の改善</li>
@@ -321,78 +402,80 @@
           <li>不正利用防止（例：利用回数制限の適用）</li>
         </ul>
 
-        <h3>4. AI処理（第三者への送信）</h3>
-        <p>
-          本アプリはレポート生成のため、解析により得られた<strong>数値データ（骨格座標・指標等）</strong>と、
-          言語/ペルソナ等の必要情報を当方のバックエンドに送信し、バックエンドからAI提供元（現状：Google Gemini など）
-          へ送信する場合があります。
-        </p>
-        <div class="note">
-          <strong>重要：</strong>
-          <ul>
-            <li>動画ファイル自体は送信しません。</li>
-            <li>送信するのは <strong>数値化された解析データ</strong>およびレポート生成に必要な情報に限ります。</li>
-          </ul>
-        </div>
+        <div class="divider"></div>
 
-        <h3>5. 保存と保持期間</h3>
+        <h2>4. AI処理（第三者への送信）</h2>
+        <p>
+          本アプリはレポート生成のため、解析により得られた数値データ（骨格座標・指標等）と、
+          言語/ペルソナ等の必要情報を当方のバックエンドに送信し、バックエンドからAI提供元
+          （現状：Google Gemini など）へ送信する場合があります。
+        </p>
+        <p><strong>重要：</strong></p>
         <ul>
-          <li><strong>端末内：</strong> 生成されたレポート等は端末内に保存される場合があります。</li>
-          <li><strong>サーバー側：</strong> 動画ファイルは保存しません。数値データはレポート生成のために一時的に処理される場合があります。運用上必要最小限のログ（エラー情報等）が残ることがあります。</li>
-          <li><strong>分析/クラッシュデータ：</strong> Firebase側で標準的な保持期間に従って保持される場合があります。</li>
+          <li>動画ファイル自体は送信しません。</li>
+          <li>送信するのは数値化された解析データおよびレポート生成に必要な情報に限ります。</li>
         </ul>
 
-        <h3>6. 第三者提供</h3>
+        <div class="divider"></div>
+
+        <h2>5. 保存と保持期間</h2>
+        <ul>
+          <li>端末内：生成されたレポート等は端末内に保存される場合があります。</li>
+          <li>サーバー側：動画ファイルは保存しません。数値データはレポート生成のために一時的に処理される場合があります。運用上必要最小限のログ（エラー情報等）が残ることがあります。</li>
+          <li>分析/クラッシュデータ：Firebase側で標準的な保持期間に従って保持される場合があります。</li>
+        </ul>
+
+        <div class="divider"></div>
+
+        <h2>6. 第三者提供</h2>
         <p>当方は以下の範囲で情報を共有する場合があります：</p>
         <ul>
-          <li><strong>運用に必要なサービス提供者</strong>
+          <li>運用に必要なサービス提供者
             <ul>
               <li>Google Firebase（Analytics / Crashlytics / Functions等）</li>
               <li>レポート生成のためのAI提供元（Google Gemini等）</li>
             </ul>
           </li>
-          <li><strong>法令対応：</strong> 法令に基づく場合や権利保護・安全確保のため必要な場合</li>
+          <li>法令対応：法令に基づく場合や権利保護・安全確保のため必要な場合</li>
         </ul>
         <p>当方は個人情報を販売しません。</p>
 
-        <h3>7. ユーザーの選択肢</h3>
+        <div class="divider"></div>
+
+        <h2>7. ユーザーの選択肢</h2>
         <ul>
           <li>アプリをアンインストールすることで、以降の収集を停止できます。</li>
-          <li>
-            分析/クラッシュログに紐づくデータの削除相談は
-            <a href="mailto:golfscan.ai.support@gmail.com">golfscan.ai.support@gmail.com</a> へご連絡ください。
-            <span class="muted">（ただし、分析データは個人と直接結び付かない形で扱われる場合があります。）</span>
-          </li>
+          <li>分析/クラッシュログに紐づくデータの削除相談は <a href="mailto:golfscan.ai.support@gmail.com">golfscan.ai.support@gmail.com</a> へご連絡ください。（ただし、分析データは個人と直接結び付かない形で扱われる場合があります。）</li>
         </ul>
 
-        <h3>8. 子どものプライバシー</h3>
-        <p>
-          本アプリは原則として 13歳未満（または居住地域で定められた最低年齢未満）を対象としていません。
-          当方は13歳未満の子どもから個人情報を意図的に取得しません。
-        </p>
+        <div class="divider"></div>
 
-        <h3>9. 国際的な処理</h3>
-        <p>
-          サービス提供者のインフラ（例：Google/Firebase）により、情報が国外で処理される場合があります。
-          当方は情報保護のため合理的な措置を講じます。
-        </p>
+        <h2>8. 子どものプライバシー</h2>
+        <p>本アプリは原則として13歳未満（または居住地域で定められた最低年齢未満）を対象としていません。当方は13歳未満の子どもから個人情報を意図的に取得しません。</p>
 
-        <h3>10. セキュリティ</h3>
-        <p>
-          当方は合理的な安全管理措置を講じますが、あらゆる通信・保管方法が完全に安全であることを保証するものではありません。
-        </p>
+        <div class="divider"></div>
 
-        <h3>11. 改定</h3>
-        <p>
-          本ポリシーは必要に応じて改定されます。改定時は施行日を更新します。
-          改定後に本アプリを利用した場合、改定後の内容に同意したものとみなされます。
-        </p>
+        <h2>9. 国際的な処理</h2>
+        <p>サービス提供者のインフラ（例：Google/Firebase）により、情報が国外で処理される場合があります。当方は情報保護のため合理的な措置を講じます。</p>
 
-        <h3>12. 連絡先</h3>
-        <p><strong>運営者：</strong> [Your Legal Name]</p>
-        <p><strong>メール：</strong> <a href="mailto:golfscan.ai.support@gmail.com">golfscan.ai.support@gmail.com</a></p>
-      </div>
-    </section>
+        <div class="divider"></div>
+
+        <h2>10. セキュリティ</h2>
+        <p>当方は合理的な安全管理措置を講じますが、あらゆる通信・保管方法が完全に安全であることを保証するものではありません。</p>
+
+        <div class="divider"></div>
+
+        <h2>11. 改定</h2>
+        <p>本ポリシーは必要に応じて改定されます。改定時は施行日を更新します。改定後に本アプリを利用した場合、改定後の内容に同意したものとみなされます。</p>
+
+        <div class="divider"></div>
+
+        <h2>12. 連絡先</h2>
+        <p><strong>運営者：</strong>[Nozomu Tanaka]<br/>
+           <strong>メール：</strong><a href="mailto:golfscan.ai.support@gmail.com">golfscan.ai.support@gmail.com</a>
+        </p>
+      </section>
+    </main>
 
     <div class="footer">
       © <span id="y"></span> GolfScan AI. All rights reserved.
